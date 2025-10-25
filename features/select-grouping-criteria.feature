@@ -6,7 +6,7 @@ Feature: Group files by criteria
     Then Files are grouped by selected criteria as '<criteria>'
 
     Examples:
-      | criteria         |
-      | Tipo             |
-      | Tamaño           |
-      | Patrón de nombre |
+      | criteria     |
+      | Type         |
+      | Size         |
+      | Name Pattern |

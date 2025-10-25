@@ -1,7 +1,6 @@
 from behave import given, when, then
 from pathlib import Path
 from pyfakefs.fake_filesystem_unittest import Patcher
-# from pyfakefs.fake_filesystem_unittest import
 
 
 @given("The user selects a folder as {folder}")

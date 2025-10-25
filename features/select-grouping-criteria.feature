@@ -10,3 +10,8 @@ Feature: Group files by criteria
       | Type         |
       | Size         |
       | Name Pattern |
+
+  Scenario: User groups files by size
+    Given User leaves default size grouping settings
+    When User groups files by Size
+    Then Files are grouped by size

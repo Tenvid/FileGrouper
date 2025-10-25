@@ -15,3 +15,7 @@ Feature: Group files by criteria
     Given User leaves default size grouping settings
     When User groups files by Size
     Then Files are grouped by size
+
+  Scenario: User groups files by type
+    When User groups files by Type
+    Then Files are grouped by type

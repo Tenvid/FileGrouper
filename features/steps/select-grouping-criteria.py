@@ -41,3 +41,25 @@ def files_are_grouped_by_size_ranges(context):
         for slice in context.slices:
             assert context.fs.exists(f"{context.origin}/{slice}")
         context.patcher.tearDown()
+
+
+# User groups files by type
+
+@when("User groups files by Type")
+def user_groups_files_by_type(context):
+        context.patcher = Patcher()
+        context.patcher.setUp()
+        context.fs = context.patcher.fs
+        context.fs.makedir("origin_folder")
+        context.fs.makedir("destination_folder")
+        context.types = ["Documents", "Images", "Videos", "Music", "Others"]
+        context.origin = "origin_folder"
+        context.destination = "destination_folder"
+        for type in context.types:
+            context.fs.makedir(f"{context.origin}/{type}")
+
+@then("Files are grouped by type")
+def files_are_grouped_by_type(context):
+        for type in context.types:
+            assert context.fs.exists(f"{context.origin}/{type}")
+        context.patcher.tearDown()

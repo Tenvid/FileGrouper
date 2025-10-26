@@ -16,3 +16,6 @@ exclude = ["features/"]
 exclude = ["features/"]
 indent-width = 8
 line-length = 200
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

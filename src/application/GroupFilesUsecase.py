@@ -8,5 +8,5 @@ class GroupFilesUsecase:
                 self.__destination = destination
                 self.__grouper = grouper
 
-        def execute(self):
+        def execute(self) -> None:
                 self.__grouper.group_files(self.__origin, self.__destination)

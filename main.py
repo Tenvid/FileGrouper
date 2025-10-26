@@ -3,7 +3,7 @@ from src.application.GroupFilesUsecase import GroupFilesUsecase
 from src.domain.size_grouper import SizeGrouper
 
 
-def main():
+def main() -> None:
         raw_origin_path = input("Enter the origin folder path: ")
         raw_destination_path = input("Enter the destination folder path: ")
         grouper = SizeGrouper()

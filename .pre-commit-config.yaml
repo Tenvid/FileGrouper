@@ -1,3 +1,5 @@
+exclude: ".*(/tests/|features/)"
+
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
@@ -12,4 +14,4 @@ repos:
     rev: "v1.18.2" # Use the sha / tag you want to point at
     hooks:
       - id: mypy
-        args: [--strict]
+        args: ["--strict"]
